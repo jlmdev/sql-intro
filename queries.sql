@@ -9,11 +9,12 @@
     IsPartTime      BOOLEAN
 */
 CREATE TABLE "Employees" (
-  "FullName"        TEXT,
+  "FullName"        TEXT NOT NULL,
   "Salary"          INT,
-  "JobPosition"     TEXT,
+  "JobPosition"     TEXT NOT NULL,
   "PhoneExtension"  TEXT,
-  "IsPartTime"      BOOLEAN
+  "IsPartTime"      BOOLEAN,
+  "Id"              SERIAL PRIMARY KEY
 );
 
 -- Insert Dummy Rows
@@ -78,3 +79,5 @@ WHERE "FullName" = 'Lazy Larry';
 
 -- Add Column ParkingSpot as VARCHAR(10)
 ALTER TABLE "Employees" ADD COLUMN "ParkingSpot" VARCHAR(10);
+
+
